@@ -1,4 +1,4 @@
-package com.example.AdminBackend.Controller;
+package com.example.AdminBackend.controller;
 
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RestController;
