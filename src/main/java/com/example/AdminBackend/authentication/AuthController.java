@@ -14,7 +14,8 @@ import com.example.AdminBackend.dto.LoginRequest;
 import com.example.AdminBackend.model.User;
 import com.example.AdminBackend.repository.UserRepo;
 
-import io.swagger.v3.oas.annotations.parameters.RequestBody;
+import org.springframework.web.bind.annotation.RequestBody;
+
 
 @RestController
 @RequestMapping("/auth")
@@ -48,4 +49,11 @@ private PasswordEncoder passwordEncoder = new BCryptPasswordEncoder();
 	        res.put("error", "Invalid credentials");
 	        return res;
 	    }
+
+
+		@PostMapping("/test")
+public String test(@RequestBody Map<String, Object> body) {
+    System.out.println("Received body: " + body);
+    return "OK";
+}
 }
